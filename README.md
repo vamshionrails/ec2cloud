@@ -1,3 +1,19 @@
+
+| Purpose / Service                    | Domain Pattern                                               |
+| ------------------------------------ | ------------------------------------------------------------ |
+| EKS Control Plane (API)              | `eks.REGION.amazonaws.com`                                   |
+| ECR API & Image Pull                 | `ecr.REGION.amazonaws.com`, `*.dkr.ecr.REGION.amazonaws.com` |
+| EC2 API                              | `ec2.REGION.amazonaws.com`                                   |
+| STS (IAM role assumption/IRSA)       | `sts.REGION.amazonaws.com`                                   |
+| CloudWatch Logs                      | `logs.REGION.amazonaws.com`                                  |
+| Elastic Load Balancing (ALB/NLB)     | `elasticloadbalancing.REGION.amazonaws.com`                  |
+| X-Ray (optional)                     | `xray.REGION.amazonaws.com`                                  |
+| S3 (assets, manifests, AMIs, etc.)   | `s3.REGION.amazonaws.com`                                    |
+| EKS Auth (Pod identity agent)        | `eks-auth.REGION.api.aws`                                    |
+| App Mesh envoy management (optional) | `appmesh-envoy-management.REGION.amazonaws.com`              |
+
+
+
 Required AWS Service Domains (for NAT gateway egress)
 
 Based on AWS documentation, incoming node traffic via NAT must be able to reach:
