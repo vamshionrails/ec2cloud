@@ -1,3 +1,7 @@
+If you're configuring a NAT Gateway to support Amazon EKS cluster creation—especially in a private or hybrid networking setup—you'll need to allow outbound access to specific AWS service endpoints (URLs). These are the domains your cluster and nodes must reach to pull images, talk to control plane services, assume roles, send logs, etc.
+
+Below is a list of service endpoints that typically require NAT Gateway access. These are the publicly resolvable AWS service domains (not VPC endpoint hostnames):
+
 
 | Purpose / Service                    | Domain Pattern                                               |
 | ------------------------------------ | ------------------------------------------------------------ |
